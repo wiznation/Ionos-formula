@@ -476,3 +476,8 @@ button:active {
   width: 100%;
   border-radius: 8px;
 }
+
+#studentEmailDisplay {
+  color: #1e66ff;
+  font-weight: 600;
+}
